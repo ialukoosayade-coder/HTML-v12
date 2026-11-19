@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nom i Cognoms de l'Alumne">
+    <title>Pràctica 2 CSS - Selectors, Cascada i Box Model</title>
+    
+    <!-- 1. Ubicació Externa -->
+    <link rel="stylesheet" href="estils.css">
+
+    <!-- 2. Ubicació Interna -->
+    <style>
+        /* parte uno */
+        .caixa-avis {
+            background-color: #dbeafe; /* Groc clar */
+            border-color: #eab308;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Segoe UI, Tahoma, sans-serif;
+            color: #1e293b;
+            background-color:#f8fafc;
+            
+        }
+        /* Parte tres c:*/
+        #capcalera{
+            text-align: center;
+            background-color: #0f172a;
+            padding: 20px;
+            color: white;
+        }
+        .menu li {
+            display:inline-block;
+            padding: 15px;
+        }
+        #contingut{
+            width: 85%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .fitxa{
+            background-color:white;
+            border:#cbd5e1 2px solid;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .etiqueta-inline span{
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+        }
+/*Part 4: Selectores Combinadors */
+                /* Descendent*/
+
+        nav a{
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+                /* Hij@ directo*/
+
+        #contingut  >  section{
+            padding: 25px;
+            background-color:white;
+        }
+        /*Germà adjacent */
+
+        h2  +  p{
+            font-weight: bold;
+            color: #0284c7;
+        }
+ /* Germans generals*/
+
+        h2 ~ p{
+            font-size: 1.05rem;
+         }
+ /* Parte 5*/
+
+  /* links verdes*/
+        a[href] {
+            color: #15803d;
+            font-weight: bold;
+        }
+         /* color rojo para enlaces que apuntan a PDF*/
+        a[href$=".pdf"]{
+            color:#8b0000
+        }
+ /* Part 6*/
+  /* pseudo-classes*/
+   /* cambio de color al pasar el ratón*/
+  a:hover{
+    background-color:#334155;
+    border-radius: 5px;
+  }
+  /* cambio d*/
+  a:last-of-type{
+    margin-bottom: 0px;
+    border-left: 6px solid #0284c7;
+  }
+   /* Pseudo-elementos*/
+   .fitxa h3::before {
+     content: "▸ "; color: #0284c7;
+     }
+        /* PDF después del link*/
+    a[href$=".pdf"]::after{
+        content: "(PDF)";
+    }
+       /* Primera letra*/
+       .intro::first-letter{
+        font-size: 1.5rem;
+        color:#0284c7
+       }
+    </style>
+</head>
+<body>
+
+    <header id="capcalera">
+        <h1>Portal de Recursos DAM</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inici">Inici</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Docs</a></li>
+                <li><a href="https://validator.w3.org" target="_blank">Validador W3C</a></li>
+                <li><a href="apunts-css.pdf">Descarregar PDF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contingut">
+        <!-- 3. Ubicació En Línia (Inline) -->
+        <div class="caixa-avis" style="background-color: #fee2e2; border-color: #ef4444;">
+            <p><strong>Atenció:</strong> Aquest panell comprova la prioritat de la cascada CSS.</p>
+        </div>
+
+        <section class="llistat-recursos">
+            <h2>Guia de Referència</h2>
+            <p class="intro">Aquest paràgraf va immediatament després del títol H2.</p>
+            <p>Aquest és un segon paràgraf germà general dins de la secció.</p>
+
+            <article class="fitxa">
+                <h3>1. Model de Caixes (Box Model)</h3>
+                <p>L'ús de <span class="etiqueta-inline">box-sizing: border-box</span> evita que el padding augmenti l'amplada total de l'element.</p>
+                <a href="https://www.w3schools.com/css/css3_box-sizing.asp" target="_blank">Especificació oficial</a>
+            </article>
+
+            <article class="fitxa">
+                <h3>2. Selectors Avançats</h3>
+                <p>Permeten aplicar estils precisos sense omplir l'HTML de classes innecessàries.</p>
+                <a href="guia-selectors.pdf">Guia en PDF</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mòdul 04 - Llenguatges de Marques (DAM)</p>
+    </footer>
+
+</body>
+</html>
