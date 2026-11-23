@@ -16,107 +16,108 @@
             background-color: #dbeafe; /* Azul claro*/
             border-color: #eab308; /* Amarillo*/
             color: #1e293b; /* Azul oscuro*/
-            margin-bottom: 20px;
-            padding: 15px;
+            margin-bottom: 20px; /* 20px de margen inferior*/
+            padding: 15px; /* 15px de relleno*/
         }
 /* El fondo sale rojo claro porque el estilo del HTML tiene más prioridad que el del CSS externo. Si pongo !important en el CSS externo, el fondo cambiará a azul claro porque tendrá más prioridad que el estilo del HTML */
         * {
-            box-sizing: border-box;
+            box-sizing: border-box; /* Aplica box-sizing a todos los elementos*/
         }
         body{
-            font-family: Segoe UI, Tahoma, sans-serif;
+            font-family: Segoe UI, Tahoma, sans-serif; 
             color: #1e293b; /* Azul oscuro*/
-            background-color:#f8fafc;
+            background-color:#f8fafc; /* Blanco cenicienta*/
             
         }
         /* Parte tres c:*/
         #capcalera {
-            text-align: center;
-            background-color: #0f172a;
-            padding: 20px;
-            color: white;
+            text-align: center; /* Centrado del texto*/
+            background-color: #0f172a; /* Azul oscuro*/
+            padding: 20px; /* 20px de relleno*/
+            color: white; /* Blanco */
         }
         .menu li {
-            display:inline-block;
-            margin-right: 15px;
+            display:inline-block; /* Muestra los elementos de la lista en línea horizontal*/
+            margin-right: 15px; /* 15px de margen derecho entre los elementos de la lista*/
         }
         #contingut {
-            width: 85%;
-            max-width: 900px;
-            margin: 20px auto;
+            width: 85%; /* 85% del ancho del contenedor padre*/
+            max-width: 900px; /* Ancho máximo de 900px*/
+            margin: 20px auto; /* 20px de margen superior e inferior, centrado horizontalmente*/
         }
         .fitxa {
-            background-color:white;
-            border:#cbd5e1 2px solid;
-            padding: 20px;
-            margin-bottom: 20px;
+            background-color:white; /* Blanco*/
+            border:#cbd5e1 2px solid; /* Borde gris claro de 2px*/
+            padding: 20px; /* 20px de relleno*/
+            margin-bottom: 20px; /* 20px de margen inferior entre las fichas*/
         }
         .etiqueta-inline {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            background-color: #e2e8f0;
+            display: inline-block; /* Muestra el elemento como un bloque en línea*/
+            padding: 2px 8px; /* 2px arriba y abajo, 8px izquierda y derecha*/
+            border-radius: 4px; /* Bordes redondeados*/
+            background-color: #e2e8f0; /* Gris claro*/
         }
 /*Part 4: Selectores Combinadors */
                 /* Descendent*/
 
         nav a{
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
+            color: white; /* Blanco*/
+            padding: 8px 12px; /* 8px arriba y abajo, 12px izquierda y derecha*/
+            text-decoration: none; /* Sin subrayado*/
         }
         /* Hij@ directo*/
 
         #contingut  >  section{
-            padding: 25px;
-            background-color:white;
+            padding: 25px; /* 25px de relleno*/
+            background-color:white; /* Blanco*/
         }
         /*Germà adjacent */
 
         h2  +  p{
-            font-weight: bold;
-            color: #0284c7;
+            font-weight: bold; /* Fuente en negrita*/
+            color: #0284c7; /* Azul oceano */
         }
  /* Germans generals*/
 
         h2 ~ p{
-            font-size: 1.05rem;
+            font-size: 1.05rem; /* 1.05 veces el tamaño de fuente normal*/
         }
  /* Parte 5*/
 
   /* links verdes*/
         a[target="_blank"] {
-            color: #15803d;
-            font-weight: bold;
+            color: #15803d; /* Verde*/
+            font-weight: bold; /* Fuente en negrita*/
         }
         /* color rojo para enlaces que apuntan a PDF*/
         a[href$=".pdf"] {
-            color:#b91c1c;
+            color:#b91c1c; /* Rojo*/
+
         }
  /* Part 6*/
   /* pseudo-classes*/
    /* cambio de color al pasar el ratón*/
         a:hover{
-             background-color:#334155;
-             border-radius: 5px;
+             background-color:#334155; /* Azul grisáceo*/
+             border-radius: 5px; /* Bordes redondeados*/
         }
   /* cambio de estilo para el último enlace*/
         .fitxa:last-of-type {
-             margin-bottom: 0px;
-             border-left: 6px solid #0284c7;
+             margin-bottom: 0px; /* elimina el margen inferior del último artículo*/
+             border-left: 6px solid #0284c7; /* Azul oceano */
         }
    /* Pseudo-elementos*/
         .fitxa h3::before {
-             content: "▸ "; color: #0284c7;
+             content: "▸ "; color: #0284c7; /* Azul oceano */
         }
         /* PDF después del link*/
         a[href$=".pdf"]::after{
-             content: "[PDF]";
+             content: "[PDF]"; /* Añade el texto [PDF] después del enlace*/
         }
        /* Primera letra*/
         .intro::first-letter{
-             font-size: 1.5rem;
-             color:#0284c7
+             font-size: 1.5rem; /* 1.5 veces el tamaño de fuente normal*/
+             color:#0284c7; /* Azul oceano */
             }
     </style>
 </head>
